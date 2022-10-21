@@ -1,1 +1,0 @@
-Training was using same split for train and val images until the next training

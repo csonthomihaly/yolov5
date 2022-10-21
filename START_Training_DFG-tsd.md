@@ -19,13 +19,13 @@
 #python train.py --img 640 --batch-size 64 --epochs 2000 --data DFG-tsd.yaml --weights yolov5s.pt --workers 10 --cache ram --device 0,1 --project Traffic_signs
 
 # Start from original v5n weight with correct splitting & batch 64
-python train.py --img 640 --batch-size -1 --epochs 2000 --data DFG-tsd.yaml --weights yolov5n.pt --workers 16 --cache ram --device 0,1 --project Traffic_signs_v5n
+#python train.py --img 640 --batch-size -1 --epochs 2000 --data DFG-tsd.yaml --weights yolov5n.pt --workers 16 --cache ram --device 0,1 --project Traffic_signs_v5n
 
 # Start from scratch v5m weight with correct splitting & batch 64
-#python train.py --img 640 --batch-size -1 --epochs 2000 --data DFG-tsd.yaml --weights '' --workers 16 --cache ram --device 0,1 --project Traffic_signs_v5m
+# python train.py --img 640 --batch-size -1 --epochs 2000 --data DFG-tsd.yaml --weights '' --cfg 'yolov5m_200.yaml' --workers 16 --cache ram --device 0,1 --project Traffic_signs_v5m_scratch
 
 # Start from scratch v5s weight with correct splitting & batch 64
-#python train.py --img 640 --batch-size 64 --epochs 2000 --data DFG-tsd.yaml --weights '' --workers 10 --cache ram --device 0,1 --project Traffic_signs
+#python train.py --img 640 --batch-size 64 --epochs 2000 --data DFG-tsd.yaml --weights '' --cfg 'yolov5s_200.yaml' --workers 10 --cache ram --device 0,1 --project Traffic_signs_v5s_scratch
 
 # Start from scratch v5n weight with correct splitting & batch 64
-#python train.py --img 640 --batch-size -1 --epochs 2000 --data DFG-tsd.yaml --weights '' --workers 16 --cache ram --device 0,1 --project Traffic_signs_v5n
+python train.py --img 640 --batch-size -1 --epochs 2000 --data DFG-tsd.yaml --weights '' --cfg 'yolov5n_200.yaml' --workers 16 --cache ram --device 1 --project Traffic_signs_v5n_scratch
